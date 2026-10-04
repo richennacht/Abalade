@@ -103,7 +103,7 @@ export default function Live({ session }: { session: SessionState }) {
             <div className="cv-empty">
               <h3>Ready when you are</h3>
               <p>
-                Cravin listens to you and the other side as two streams,
+                Abalade listens to you and the other side as two streams,
                 translates what isn't in your language, and suggests answers
                 when they ask something.
               </p>

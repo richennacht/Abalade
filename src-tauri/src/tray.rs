@@ -445,9 +445,9 @@ pub fn tray_tooltip() -> String {
 
 fn version_label() -> String {
     if cfg!(debug_assertions) {
-        format!("Cravin v{} (Dev)", env!("CARGO_PKG_VERSION"))
+        format!("Abalade v{} (Dev)", env!("CARGO_PKG_VERSION"))
     } else {
-        format!("Cravin v{}", env!("CARGO_PKG_VERSION"))
+        format!("Abalade v{}", env!("CARGO_PKG_VERSION"))
     }
 }
 

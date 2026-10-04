@@ -118,7 +118,7 @@ This compiles a release binary and generates platform-specific bundles (deb, rpm
 
 ## Linux Install (from source)
 
-The raw binary (`src-tauri/target/release/handy`) cannot run standalone — it needs Tauri resource files (tray icons, sounds, VAD model) to be co-located at the expected path.
+The raw binary (`src-tauri/target/release/abalade`) cannot run standalone — it needs Tauri resource files (tray icons, sounds, VAD model) to be co-located at the expected path.
 
 **Install from the deb bundle** (works on any Linux distro):
 
@@ -126,7 +126,7 @@ The raw binary (`src-tauri/target/release/handy`) cannot run standalone — it n
 cd /tmp
 ar x /path/to/Handy/src-tauri/target/release/bundle/deb/Handy_*_amd64.deb data.tar.gz
 tar xzf data.tar.gz
-sudo cp usr/bin/handy /usr/bin/
+sudo cp usr/bin/abalade /usr/bin/
 sudo cp -a usr/lib/. /usr/lib/
 sudo cp -r usr/share/icons/hicolor/* /usr/share/icons/hicolor/
 sudo cp usr/share/applications/Handy.desktop /usr/share/applications/
@@ -137,7 +137,7 @@ The runtime libraries live in the app-private `/usr/lib/Handy/` (on the binary's
 After subsequent rebuilds, copy the binary and any refreshed runtime libraries:
 
 ```bash
-sudo cp src-tauri/target/release/handy /usr/bin/
+sudo cp src-tauri/target/release/abalade /usr/bin/
 sudo mkdir -p /usr/lib/Handy
 sudo cp -a src-tauri/transcribe-libs/. /usr/lib/Handy/
 ```
@@ -152,13 +152,13 @@ Local builds use the ad-hoc `signingIdentity: "-"`. A rebuild can have a new mac
 identity while the old **System Settings > Privacy & Security > Accessibility** entry
 remains visibly enabled, leaving Handy on `Waiting...`.
 
-After installing the final bundle at `/Applications/Handy.app`, quit Handy, clear only its
+After installing the final bundle at `/Applications/Abalade.app`, quit Handy, clear only its
 stale Accessibility record, then reopen it:
 
 ```bash
 osascript -e 'tell application id "com.pais.handy" to quit' || true
 tccutil reset Accessibility com.pais.handy
-open /Applications/Handy.app
+open /Applications/Abalade.app
 ```
 
 Grant Accessibility again when prompted. This does not reset Microphone or other TCC
@@ -168,8 +168,8 @@ For optional diagnosis, compare the designated requirements of the previous and 
 bundles:
 
 ```bash
-codesign -dr - /path/to/previous/Handy.app 2>&1
-codesign -dr - /Applications/Handy.app 2>&1
+codesign -dr - /path/to/previous/Abalade.app 2>&1
+codesign -dr - /Applications/Abalade.app 2>&1
 ```
 
 An ad-hoc requirement contains a `cdhash`; a changed requirement confirms the rebuild is
@@ -260,11 +260,11 @@ and `bun run tauri build` work normally.
 
 ### Windows `tauri build` fails at bundling with `program not found`
 
-If the build compiles all the way to `Built application at: ...\handy.exe` and
+If the build compiles all the way to `Built application at: ...\abalade.exe` and
 then fails with:
 
 ```
-Signing C:\...\handy.exe with a custom signing command
+Signing C:\...\abalade.exe with a custom signing command
 failed to bundle project `program not found`
 ```
 

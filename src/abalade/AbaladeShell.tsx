@@ -6,7 +6,7 @@ import {
   Radio,
   Settings as SettingsIcon,
 } from "lucide-react";
-import "./cravin.css";
+import "./abalade.css";
 import { inTauri } from "./lib/runtime";
 import { useSession } from "./lib/useSession";
 import { useUpdater } from "./lib/updater";
@@ -40,7 +40,7 @@ const SETUP: NavItem[] = [
   { id: "settings", label: "Settings", icon: <SettingsIcon size={15} /> },
 ];
 
-export default function CravinShell() {
+export default function AbaladeShell() {
   const [page, setPage] = useState<Page>("home");
   const session = useSession();
   const updater = useUpdater();
@@ -107,7 +107,7 @@ export default function CravinShell() {
       <aside className="cv-sidebar">
         <div className="cv-brand">
           <span className="cv-brand-mark" />
-          <span className="cv-hide-narrow">Cravin</span>
+          <span className="cv-hide-narrow">Abalade</span>
         </div>
         <nav className="cv-nav-group">
           <div className="cv-nav-label cv-hide-narrow">Browse</div>

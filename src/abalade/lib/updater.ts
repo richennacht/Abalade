@@ -96,7 +96,7 @@ export const updateLabel = (s: UpdaterState): string => {
     case "downloading":
       return `Downloading ${s.progress}%`;
     case "installing":
-      return "Installing, Cravin will restart";
+      return "Installing, Abalade will restart";
     case "portable":
       return "Portable build: download the new version from Releases";
     case "error":

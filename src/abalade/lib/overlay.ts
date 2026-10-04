@@ -3,11 +3,11 @@ import { WebviewWindow } from "@tauri-apps/api/webviewWindow";
 import { inTauri, loadPrefs } from "./runtime";
 
 export const OVERLAY_LABEL = "assist";
-export const ANSWERS_EVENT = "cravin://answers";
-export const ASK_EVENT = "cravin://ask";
+export const ANSWERS_EVENT = "abalade://answers";
+export const ASK_EVENT = "abalade://ask";
 
 /**
- * Keep Cravin's windows out of screen shares and recordings while they stay
+ * Keep Abalade's windows out of screen shares and recordings while they stay
  * visible on the user's own display. Tauri maps this to
  * SetWindowDisplayAffinity(WDA_EXCLUDEFROMCAPTURE) on Windows 10 2004+ and
  * NSWindow.sharingType = .none on macOS. macOS honours it only partly: some
@@ -35,8 +35,8 @@ export const toggleOverlay = async () => {
   }
   const { hideFromShare } = loadPrefs();
   new WebviewWindow(OVERLAY_LABEL, {
-    url: "src/cravin/overlay/index.html",
-    title: "Cravin Assist",
+    url: "src/abalade/overlay/index.html",
+    title: "Abalade Assist",
     width: 360,
     height: 460,
     minWidth: 280,

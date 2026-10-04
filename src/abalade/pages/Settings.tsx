@@ -214,7 +214,7 @@ export default function Settings() {
         </Row>
         <Row
           title="Recording indicator"
-          desc="Show a dot while Cravin is listening"
+          desc="Show a dot while Abalade is listening"
         >
           <Switch
             on={prefs.recordingIndicator}
@@ -222,8 +222,8 @@ export default function Settings() {
           />
         </Row>
         <Row
-          title="Hide Cravin from screen share"
-          desc="You still see Cravin and its overlay, but Zoom, Meet, Teams and most recorders don't. Reliable on Windows 10 2004+, best effort on macOS, not available on Linux."
+          title="Hide Abalade from screen share"
+          desc="You still see Abalade and its overlay, but Zoom, Meet, Teams and most recorders don't. Reliable on Windows 10 2004+, best effort on macOS, not available on Linux."
         >
           <Switch
             on={prefs.hideFromShare}
@@ -239,7 +239,7 @@ export default function Settings() {
       <h2 className="cv-section-title">Updates</h2>
       <div className="cv-list">
         <Row
-          title={`Cravin ${version}`}
+          title={`Abalade ${version}`}
           desc={
             inTauri ? updateLabel(updater) : "Updates run in the desktop app"
           }
@@ -286,7 +286,7 @@ export default function Settings() {
 
       <h2 className="cv-section-title">Engine</h2>
       <p className="cv-row-desc" style={{ marginTop: -6, marginBottom: 12 }}>
-        The transcription engine Cravin is built on (Handy). Its dictation
+        The transcription engine Abalade is built on (Handy). Its dictation
         shortcut still works.
       </p>
       {inTauri ? (

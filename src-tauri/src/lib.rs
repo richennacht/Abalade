@@ -816,11 +816,11 @@ pub fn run(cli_args: CliArgs) {
                     Target::new(if let Some(data_dir) = portable::data_dir() {
                         TargetKind::Folder {
                             path: data_dir.join("logs"),
-                            file_name: Some("cravin".into()),
+                            file_name: Some("abalade".into()),
                         }
                     } else {
                         TargetKind::LogDir {
-                            file_name: Some("cravin".into()),
+                            file_name: Some("abalade".into()),
                         }
                     })
                     .filter(|metadata| {
@@ -945,7 +945,7 @@ pub fn run(cli_args: CliArgs) {
             // for portable mode (redirects WebView2 cache to portable Data dir)
             let mut win_builder =
                 tauri::WebviewWindowBuilder::new(app, "main", tauri::WebviewUrl::App("/".into()))
-                    .title("Cravin")
+                    .title("Abalade")
                     .inner_size(1120.0, 740.0)
                     .min_inner_size(820.0, 560.0)
                     .resizable(true)

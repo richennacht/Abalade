@@ -4,7 +4,7 @@ import { Cpu, Cloud, EyeOff, X } from "lucide-react";
 import { emitTo, listen } from "@tauri-apps/api/event";
 import { getCurrentWindow } from "@tauri-apps/api/window";
 import { applyTheme, getStoredTheme } from "@/lib/utils/theme";
-import "../cravin.css";
+import "../abalade.css";
 import { ANSWERS_EVENT, ASK_EVENT } from "../lib/overlay";
 import { loadPrefs } from "../lib/runtime";
 import type { LiveAnswer } from "../lib/useSession";

@@ -18,8 +18,8 @@ import "./App.css";
 import Onboarding, { AccessibilityOnboarding } from "./components/onboarding";
 import { type OnboardingPreviewStep } from "./components/settings";
 import { ErrorBoundary } from "./components/ErrorBoundary";
-import CravinShell from "./cravin/CravinShell";
-import { inTauri } from "./cravin/lib/runtime";
+import AbaladeShell from "./abalade/AbaladeShell";
+import { inTauri } from "./abalade/lib/runtime";
 import { useSettings } from "./hooks/useSettings";
 import { useSettingsStore } from "./stores/settingsStore";
 import { commands } from "@/bindings";
@@ -206,7 +206,7 @@ function App() {
       return;
     }
     // Handy's onboarding wizard only matters for macOS permissions. Everywhere
-    // else Cravin opens straight into its own UI and models are picked on the
+    // else Abalade opens straight into its own UI and models are picked on the
     // Models page.
     if (platform() !== "macos") {
       setOnboardingStep("done");
@@ -341,8 +341,8 @@ function App() {
   } else {
     content = (
       <div dir={direction}>
-        <ErrorBoundary context="Cravin">
-          <CravinShell />
+        <ErrorBoundary context="Abalade">
+          <AbaladeShell />
         </ErrorBoundary>
       </div>
     );

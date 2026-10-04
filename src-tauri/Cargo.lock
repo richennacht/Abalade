@@ -1091,7 +1091,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "cravin"
+name = "abalade"
 version = "0.1.0"
 dependencies = [
  "anyhow",

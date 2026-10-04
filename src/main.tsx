@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { platform } from "@tauri-apps/plugin-os";
 import App from "./App";
-import { inTauri } from "./cravin/lib/runtime";
+import { inTauri } from "./abalade/lib/runtime";
 import { installCompatShims } from "./lib/compat";
 import {
   applyTheme,

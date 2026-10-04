@@ -1,11 +1,11 @@
 [package]
-name = "cravin"
+name = "abalade"
 version = "0.1.0"
-description = "Cravin"
+description = "Abalade"
 authors = ["cjpais"]
 edition = "2021"
 license = "MIT"
-default-run = "cravin"
+default-run = "abalade"
 
 [profile.dev]
 incremental = true # Compile your binary in smaller steps.

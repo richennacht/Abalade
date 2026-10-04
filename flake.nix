@@ -1,5 +1,5 @@
 {
-  description = "Handy - A free, open source, and extensible speech-to-text application that works completely offline";
+  description = "Abalade - An open-source desktop meeting copilot";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -87,7 +87,7 @@
         in
         {
           handy = pkgs.rustPlatform.buildRustPackage {
-            pname = "cravin";
+            pname = "abalade";
             inherit version;
             src = self;
 
@@ -177,10 +177,10 @@
             '';
 
             meta = {
-              description = "A free, open source, and extensible speech-to-text application that works completely offline";
-              homepage = "https://github.com/cjpais/Handy";
+              description = "An open-source desktop meeting copilot";
+              homepage = "https://github.com/richennacht/Abalade";
               license = lib.licenses.mit;
-              mainProgram = "cravin";
+              mainProgram = "abalade";
               platforms = supportedSystems;
             };
           };

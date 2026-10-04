@@ -36,8 +36,8 @@ export default [
     },
   },
   {
-    // Cravin's UI copy is still moving; it moves into i18n once it settles.
-    files: ["src/cravin/**/*.{ts,tsx}"],
+    // Abalade's UI copy is still moving; it moves into i18n once it settles.
+    files: ["src/abalade/**/*.{ts,tsx}"],
     rules: {
       "i18next/no-literal-string": "off",
     },

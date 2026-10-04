@@ -1,7 +1,7 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
-  "identifier": "cravin",
-  "description": "Cravin's main window and its floating assist overlay",
+  "identifier": "abalade",
+  "description": "Abalade's main window and its floating assist overlay",
   "windows": ["main", "assist"],
   "permissions": [
     "core:default",

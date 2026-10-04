@@ -1,10 +1,10 @@
-# Cravin
+# Abalade
 
-A private meeting copilot for your desktop. Cravin listens to both sides of a
+A private meeting copilot for your desktop. Abalade listens to both sides of a
 call, translates what isn't in your language (even mid-sentence), and suggests
 answers when the other side asks something. Local by default.
 
-Cravin is a fork of [Handy](https://github.com/cjpais/handy) (MIT). Handy's
+Abalade is a fork of [Handy](https://github.com/cjpais/handy) (MIT). Handy's
 audio capture, VAD and speech models are the engine underneath.
 
 ## What works in this version
@@ -19,7 +19,7 @@ audio capture, VAD and speech models are the engine underneath.
 | System audio capture ("Them"), turn detection, answer models    | Not built yet            |
 
 The Live and Translate screens play a scripted meeting so the UI can be
-reviewed before the engine lands. The shapes in `src/cravin/lib/demo.ts` match
+reviewed before the engine lands. The shapes in `src/abalade/lib/demo.ts` match
 what the engine will emit.
 
 ## Run it
@@ -42,9 +42,9 @@ bun run dev   # http://localhost:1420
 
 ## Layout
 
-- `src/cravin/` Cravin's UI: `CravinShell.tsx`, `pages/`, `lib/`, `cravin.css`
+- `src/abalade/` Abalade's UI: `AbaladeShell.tsx`, `pages/`, `lib/`, `abalade.css`
 - `src/` everything else is Handy's frontend (onboarding, settings components, stores)
-- `src-tauri/` Handy's Rust backend, renamed to Cravin
+- `src-tauri/` Handy's Rust backend, renamed to Abalade
 
 ## Next
 
@@ -55,7 +55,7 @@ bun run dev   # http://localhost:1420
 
 ## Updates
 
-Cravin updates itself. On launch (and every six hours) it checks the latest
+Abalade updates itself. On launch (and every six hours) it checks the latest
 GitHub release, shows "Update available" in the sidebar, and installs and
 restarts on click. Settings → Updates has "Check now" and an auto-check switch.
 
@@ -73,6 +73,15 @@ To ship an update:
 macOS and Windows code signing (Apple Developer ID, Azure Trusted Signing) are
 separate and optional for updates, but without them first installs show OS
 warnings.
+
+## Independent app identity
+
+Abalade is published in its own repository; the original
+[Cravin repository](https://github.com/richennacht/Cravin) remains available.
+The desktop identifier `app.abalade.desktop` and preferences key `abalade.prefs`
+keep Abalade's data separate from Cravin. Update checks use this repository's
+releases. The updater public key is retained; configure the matching signing
+private key in this repository's Actions secrets before shipping signed updates.
 
 ## License
 

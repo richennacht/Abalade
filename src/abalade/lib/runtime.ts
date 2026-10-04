@@ -2,7 +2,7 @@
 export const inTauri =
   typeof window !== "undefined" && "__TAURI_INTERNALS__" in window;
 
-const PREFS_KEY = "cravin.prefs";
+const PREFS_KEY = "abalade.prefs";
 
 export type Prefs = {
   translateTo: string;
